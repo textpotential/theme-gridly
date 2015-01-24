@@ -163,7 +163,7 @@
             <header>
               <h1>{{ post.title }}</h1>
             </header>
-            <p class="post-date">Published by {{ site.author }}, <time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time> (<a href="{{ post.permalink }}">permalink</a>)</p>
+            <p class="post-date">Published by {{ site.author }}, <time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
             {{ post.content}}
           </div>
           <div class="post-footer">
