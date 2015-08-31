@@ -133,7 +133,7 @@
             {% endif %}
             <div class="post-content">
               <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
-              <p class="post-date"><time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
+              <p class="post-date"><time datetime="{{ post.updated_at }}">{{ post.updated_at|date_format }}</time></p>
               {% if post.tags and not post.photos %}
               <p class="post-tags">{{- post.tags|format_tags(humanize=True) -}}</p>
               {% endif %}
@@ -164,7 +164,7 @@
             <header>
               <h1>{{ post.title }}</h1>
             </header>
-            <p class="post-date">Published by {{ site.author }}, <time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
+            <p class="post-date">Curated by {{ site.author }}, <time datetime="{{ post.updated_at }}">{{ post.updated_at|date_format }}</time></p>
             {{ post.content}}
           </div>
           <div class="post-footer">
@@ -209,7 +209,7 @@
             <header>
               <h1>{{ link.title }}</h1>
             </header>
-            <p class="post-date">Published by {{ site.author }}, <time datetime="{{ link.created_at }}">{{ link.created_at|date_format }}</time></p>
+            <p class="post-date">Curated by {{ site.author }}, <time datetime="{{ link.updated_at }}">{{ link.updated_at|date_format }}</time></p>
             {{ link.content }}
             <p class="link-url"><i class="icon-share"></i> <a href="{{ link.url }}">{{ link.url }}</a></p>
           </div>
