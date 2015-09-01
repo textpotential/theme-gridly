@@ -109,7 +109,7 @@
 
         {% if posts %}
         <section itemscope itemtype="http://schema.org/Blog" class="posts">
-        {% for post in posts|sort(attribute='updated_at') %}
+        {% for post in posts|sort(attribute='updated_at',reverse=True) %}
           <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="blog-post">
             {% if post.photos %}
             {% for photo in post.photos %}
