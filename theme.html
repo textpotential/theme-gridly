@@ -171,7 +171,8 @@
             <header>
               <h1>{{ post.title }}</h1>
             </header>
-            <p class="post-date">Curated by {{ site.author }}, <time datetime="{{ post.updated_at }}">{{ post.updated_at|date_format }}</time></p>
+	    <p class="post-date">Curated by {{ site.author }}, <time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time>
+	     (updated <time datetime="{{ post.updated_at }}">{{ post.updated_at|date_format }}</time>)</p>
             {{ post.content}}
           </div>
           <div class="post-footer">
